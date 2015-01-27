@@ -90,7 +90,7 @@ class Cookie {
                 var jData = self.toData(jString!)
                 self.user = User(J:JSON(data:jData))
                 var today = NSDateFormatter()
-                today.dateFormat = "YYYY-MM-DD"
+                today.dateFormat = "yyyy-MM-dd"
                 self.loadTodayPlanning(NSURL(string :"https://intra.epitech.eu/planning/load?format=json&start=\(today.stringFromDate(NSDate()))&end=\(today.stringFromDate(NSDate()))")!)
             }
         }
@@ -103,18 +103,31 @@ class Cookie {
             if (jString != "") {
                 var jData = self.toData(jString!)
                 self.today = TodayPlanning(J:JSON(data:jData))
-                var dateFormatter : NSDateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "YYYY-MM-DD"
-                var from : String = dateFormatter.stringFromDate(NSDate())
-                var to : String = dateFormatter.stringFromDate(NSDate().dateByAddingTimeInterval(60*60*24*7))
-                self.loadWeekPlanning(from, to: to)
                 
+                var dateFormatter : NSDateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                
+                
+                let calendar = NSCalendar.currentCalendar()
+                let date = NSDate()
+                
+                let components = NSDateComponents()
+                components.weekOfYear = 1
+
+                var tmp = calendar.dateByAddingComponents(components, toDate: date, options: nil)
+                
+                var from : String = dateFormatter.stringFromDate(date)
+
+                println("Date = \(tmp!) String from date = \(dateFormatter.stringFromDate(tmp!))")
+                var to : String = dateFormatter.stringFromDate(tmp!)
+                self.loadWeekPlanning(from, to: to)
             }
         }
     }
     
     func loadWeekPlanning(from : String, to :String)->Void {
         var url : NSURL = NSURL(string :"https://intra.epitech.eu/planning/load?format=json&start=\(from)&end=\(to)")!
+        println("requete pour le planning : \(url)" )
         var URLRequest = NSURLRequest(URL: url)
         Alamofire.request(.POST, url).responseString{(request, response, jString, error) in
             if (jString != "") {

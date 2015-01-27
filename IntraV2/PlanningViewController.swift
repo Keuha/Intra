@@ -33,7 +33,11 @@ class PlanningViewController : UIViewController {
         self.view.addSubview(self.activityIndicator)
         CookieManager.week.exludeSemester(CookieManager.info.semester)
         self.activityIndicator.stopAnimating()
-        planningTableView.reloadData()
+       
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+         planningTableView.reloadData()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -96,7 +100,7 @@ class PlanningViewController : UIViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var dateFormatter : NSDateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         var start = dateFormatter.stringFromDate(CookieManager.week.element[indexPath.section][indexPath.row].start)
         var end  = dateFormatter.stringFromDate(CookieManager.week.element[indexPath.section][indexPath.row].end)
         var room : String = CookieManager.week.element[indexPath.section][indexPath.row].roomCode
@@ -120,10 +124,12 @@ class PlanningViewController : UIViewController {
         headerCell.backgroundColor = UIColor(red: 0/255.0, green: 96/255.0, blue: 172/255.0, alpha: 1.0)
         headerCell.textLabel?.textColor = UIColor.whiteColor()
         let myCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         switch(section) {
         case 0:
             var day : Int =  myCalendar!.components(.WeekdayCalendarUnit, fromDate: NSDate()).weekday
             var date : String = dateFormatter.stringFromDate(NSDate())
+            println("\(self.dayOfTheWeek[day]) - \(date)")
             headerCell.textLabel?.text = "\(self.dayOfTheWeek[day]) - \(date)"
             return headerCell
         case 1:
