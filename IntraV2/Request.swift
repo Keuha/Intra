@@ -112,7 +112,7 @@ class Cookie {
                 let date = NSDate()
                 
                 let components = NSDateComponents()
-                components.weekOfYear = 1
+                components.day = 6
 
                 var tmp = calendar.dateByAddingComponents(components, toDate: date, options: nil)
                 
