@@ -13,7 +13,6 @@ import Alamofire
 class PlanningViewController : UIViewController {
     
     
-    
     @IBOutlet var planningTableView: UITableView!
     var CookieManager = CookieState.CookieManager
     var activityIndicator = UIActivityIndicatorView()
@@ -41,7 +40,7 @@ class PlanningViewController : UIViewController {
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 6
+        return 7
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -111,6 +110,11 @@ class PlanningViewController : UIViewController {
             var index = room.rangeOfString("/", options:NSStringCompareOptions.BackwardsSearch)?.startIndex
             var substring: String = room.substringFromIndex(advance(index!, 1))
             cell.roomTextField.text = substring
+        }
+        if (CookieManager.week.element[indexPath.section][indexPath.row].event_registered == "registered") {
+            cell.registerButton.setTitle("\u{2713}", forState: nil)
+        } else {
+            cell.registerButton.setTitle("x", forState: nil)
         }
         cell.contentView.bounds.size.width = UIScreen.mainScreen().bounds.width
         cell.layoutIfNeeded()
@@ -183,6 +187,5 @@ class PlanningViewController : UIViewController {
         imageView.backgroundColor = UIColor.blackColor()
         return imageView
     }
-
 
 }
