@@ -16,7 +16,7 @@ class WeekPlanning {
     
     init (J : JSON) {
         
-        dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:SS"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:SS"
         for (var y : Int = 0; y < 7; y++) {
             element.append(Array<WeekPlanningElement>())
         }
@@ -104,7 +104,7 @@ class WeekPlanningElement  {
     var register_month : String { get { return WeekPlanningElementJson["register_month"].string! } }
     var allowed_planning_start : NSDate { get { return dateFormatter.dateFromString(WeekPlanningElementJson["allowed_planning_start"].string!)! } }
     var project : String { get { return WeekPlanningElementJson["project"].string! } }
-    var event_registered : String { get { return WeekPlanningElementJson["event_registered"].string! } }
+    var event_registered : String { get { if let str = WeekPlanningElementJson["event_registered"].string { return str } else { return "" } } }
     var total_students_registered : Int { get { return WeekPlanningElementJson["total_students_registered"].int! } }
     var allow_register : Bool { get { return WeekPlanningElementJson["allow_register"].bool! } }
     var codemodule : String { get { return WeekPlanningElementJson["codemodule"].string! } }
