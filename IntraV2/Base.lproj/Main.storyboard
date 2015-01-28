@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14C99d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -130,16 +130,24 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="155-KI-ROD">
+                                                    <rect key="frame" x="266" y="62" width="46" height="30"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Tin-WB-bHO" firstAttribute="leading" secondItem="WkS-WS-GYD" secondAttribute="leadingMargin" id="0F7-4o-A1F"/>
                                                 <constraint firstItem="Tin-WB-bHO" firstAttribute="leading" secondItem="WkS-WS-GYD" secondAttribute="leadingMargin" id="2A5-GX-LEE"/>
                                                 <constraint firstItem="Tin-WB-bHO" firstAttribute="bottom" secondItem="WkS-WS-GYD" secondAttribute="bottomMargin" id="8FK-RR-5nr"/>
                                                 <constraint firstItem="QiZ-vo-quJ" firstAttribute="top" secondItem="WkS-WS-GYD" secondAttribute="topMargin" id="G6m-7D-qU2"/>
+                                                <constraint firstItem="155-KI-ROD" firstAttribute="trailing" secondItem="WkS-WS-GYD" secondAttribute="trailingMargin" id="ZSF-IP-sks"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Tin-WB-bHO" secondAttribute="bottom" constant="29.5" id="aiK-AO-Rt2"/>
                                                 <constraint firstItem="QiZ-vo-quJ" firstAttribute="leading" secondItem="WkS-WS-GYD" secondAttribute="leadingMargin" id="bHj-cn-QdS"/>
                                                 <constraint firstItem="Tin-WB-bHO" firstAttribute="leading" secondItem="WkS-WS-GYD" secondAttribute="leadingMargin" id="n64-uJ-tfs"/>
                                                 <constraint firstItem="Tin-WB-bHO" firstAttribute="top" secondItem="dvZ-Bo-QNu" secondAttribute="bottom" constant="8.5" id="nBS-Ns-lEJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="155-KI-ROD" secondAttribute="bottom" constant="-5.5" id="nc8-I7-hHW"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Tin-WB-bHO" secondAttribute="bottom" constant="28.5" id="pFh-Is-8jW"/>
                                                 <constraint firstItem="dvZ-Bo-QNu" firstAttribute="leading" secondItem="WkS-WS-GYD" secondAttribute="leadingMargin" id="pus-gV-iYO"/>
                                                 <constraint firstItem="Tin-WB-bHO" firstAttribute="top" secondItem="dvZ-Bo-QNu" secondAttribute="bottom" constant="8.5" id="qC0-rl-f1f"/>
@@ -152,6 +160,7 @@
                                         </accessibility>
                                         <connections>
                                             <outlet property="hourTextField" destination="Tin-WB-bHO" id="71R-2l-imH"/>
+                                            <outlet property="registerButton" destination="155-KI-ROD" id="UrS-a0-865"/>
                                             <outlet property="roomTextField" destination="dvZ-Bo-QNu" id="gqo-0t-Y7L"/>
                                             <outlet property="titleTextField" destination="QiZ-vo-quJ" id="MDl-XA-gpx"/>
                                         </connections>
