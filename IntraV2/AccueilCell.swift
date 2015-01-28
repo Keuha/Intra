@@ -36,7 +36,7 @@ class CustomTodayCell : UITableViewCell {
     @IBOutlet var roomTextField: UILabel!
     @IBOutlet var hourTextField: UILabel!
     @IBOutlet var titleTextField: UILabel!
-    @IBOutlet var suscribeButton: UIButton!
+    @IBOutlet var registerButton: UIButton!
     
     override init?(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -55,18 +55,6 @@ class CustomTodayCell : UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func onClick(sender: AnyObject) {
-        if (suscribeButton.titleLabel?.text == "-") {
-            var alert = UIAlertController(title: "Alert", message: "Voulez vous vous desincrire de \(titleTextField.text) ?", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-           
-
-        } else {
-            var alert = UIAlertController(title: "Alert", message: "Voulez vous vous incrire à \(titleTextField.text) ?", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-           
-        }
-    }
 }
 
 class CustomNoteCell : UITableViewCell {
