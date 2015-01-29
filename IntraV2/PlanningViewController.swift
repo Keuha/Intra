@@ -104,6 +104,9 @@ class PlanningViewController : UIViewController {
         var end  = dateFormatter.stringFromDate(CookieManager.week.element[indexPath.section][indexPath.row].end)
         var room : String = CookieManager.week.element[indexPath.section][indexPath.row].roomCode
         let cell = tableView.dequeueReusableCellWithIdentifier("TodayCell") as CustomTodayCell
+        cell.row = indexPath.row
+        cell.section = indexPath.section
+        cell.delegate = self
         cell.titleTextField?.text = CookieManager.week.element[indexPath.section][indexPath.row].acti_title
         cell.hourTextField?.text = "De \(start.substringFromIndex(advance(start.startIndex, 11))) à \(end.substringFromIndex(advance(end.startIndex, 11)))"
         if (!room.isEmpty) {
@@ -116,6 +119,7 @@ class PlanningViewController : UIViewController {
         } else {
             cell.registerButton.setTitle("x", forState: nil)
         }
+        cell.registerButton.addTarget(cell, action: "pressedAction:", forControlEvents: UIControlEvents.TouchUpInside)
         cell.contentView.bounds.size.width = UIScreen.mainScreen().bounds.width
         cell.layoutIfNeeded()
         cell.setNeedsUpdateConstraints()
