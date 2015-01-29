@@ -33,6 +33,9 @@ class CustomHeaderCell : UITableViewCell {
 
 class CustomTodayCell : UITableViewCell {
     
+    var section : Int!
+    var row : Int!
+    var delegate : PlanningViewController!
     @IBOutlet var roomTextField: UILabel!
     @IBOutlet var hourTextField: UILabel!
     @IBOutlet var titleTextField: UILabel!
@@ -53,6 +56,31 @@ class CustomTodayCell : UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func pressedAction(sender: UIButton!) {
+        var data = CookieState.CookieManager.week.element[section][row]
+        if (data.event_registered == "") {
+            var alert = UIAlertController(title: "Inscription", message: "Voulez-vous vous inscrire à l'activité \(data.acti_title) ?", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler:nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler:{ action in
+              CookieState.CookieManager.registerEvent(data.scolaryear, codeModule: data.codemodule, codeInstance: data.codeinstance, codeActi: data.codeacti, codeEvent: data.codeevent)
+            }))
+            self.delegate.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            var alert = UIAlertController(title: "Désinscription", message: "Voulez-vous vous désinscrire de l'activité \(data.acti_title) ?", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler:nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler:{
+                action in
+                CookieState.CookieManager.unregisterEvent(data.scolaryear, codeModule: data.codemodule, codeInstance: data.codeinstance, codeActi: data.codeacti, codeEvent: data.codeevent)
+            }))
+            self.delegate.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    private func regist() {
+        var data = CookieState.CookieManager.week.element[section][row]
+        CookieState.CookieManager.registerEvent(data.scolaryear, codeModule: data.codemodule, codeInstance: data.codeinstance, codeActi: data.codeacti, codeEvent: data.codeevent)
     }
     
 }
