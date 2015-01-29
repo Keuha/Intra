@@ -37,6 +37,7 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         gpaAccueil.text = "GPA : \(self.CookieManager.user.GPA)"
         logTableView.rowHeight = UITableViewAutomaticDimension
         logTableView.estimatedRowHeight = 220.0
+        CookieManager.week.exludeSemester(CookieManager.info.semester)
         
     }
     
@@ -65,7 +66,7 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         switch(section)
         {
         case 0:
-            return self.CookieManager.today.element.count
+            return self.CookieManager.week.element[0].count
         case 1:
             return self.CookieManager.note.element.count
         case 2:
@@ -81,12 +82,13 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         var dateFormatter : NSDateFormatter = NSDateFormatter()
         switch (indexPath.section) {
             case 0:
-                dateFormatter.dateFormat = "YYYY-MM-DD HH:mm:ss"
-                var start = dateFormatter.stringFromDate(self.CookieManager.today.element[indexPath.row].start)
-                var end  = dateFormatter.stringFromDate(self.CookieManager.today.element[indexPath.row].end)
-                var room : String = self.CookieManager.today.element[indexPath.row].roomCode
+                println("Start \(dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].start)) End\(dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].end)) Room \(self.CookieManager.week.element[indexPath.section][indexPath.row].roomCode) Title\(self.CookieManager.week.element[indexPath.section][indexPath.row].acti_title)")
+                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                var start = dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].start)
+                var end  = dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].end)
+                var room : String = self.CookieManager.week.element[indexPath.section][indexPath.row].roomCode
                 let cell = tableView.dequeueReusableCellWithIdentifier("TodayCell") as CustomTodayCell
-                cell.titleTextField?.text = self.CookieManager.today.element[indexPath.row].acti_title
+                cell.titleTextField?.text = self.CookieManager.week.element[indexPath.section][indexPath.row].acti_title
                 cell.hourTextField?.text = "De \(start.substringFromIndex(advance(start.startIndex, 11))) à \(end.substringFromIndex(advance(end.startIndex, 11)))"
                 var index = room.rangeOfString("/", options:NSStringCompareOptions.BackwardsSearch)?.startIndex
                 var substring: String = room.substringFromIndex(advance(index!, 1))
