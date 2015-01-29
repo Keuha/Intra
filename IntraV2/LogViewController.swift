@@ -97,6 +97,7 @@ class LogViewController: UIViewController {
         newID.setValue(passTextField.text, forKey:"pass")
         newID.setValue(loginTextField.text, forKey:"log")
         context.save(nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
         performSegueWithIdentifier("Log", sender: nil)
     }
     
