@@ -32,6 +32,7 @@ class PlanningViewController : UIViewController {
         self.view.addSubview(self.activityIndicator)
         CookieManager.week.exludeSemester(CookieManager.info.semester)
         self.activityIndicator.stopAnimating()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "Refresh:", name: "SuccessLogin", object: nil)
        
     }
     
@@ -191,5 +192,10 @@ class PlanningViewController : UIViewController {
         imageView.backgroundColor = UIColor.blackColor()
         return imageView
     }
+    
+    func Refresh(notification: NSNotification) {
+        self.planningTableView.reloadData();
+    }
+
 
 }
