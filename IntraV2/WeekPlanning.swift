@@ -129,7 +129,7 @@ class WeekPlanningElement  {
     var type_title : String { get { return WeekPlanningElementJson["register_student"].string! } }
     var num_event : Int { get { return WeekPlanningElementJson["num_event"].int! } }
     var end : NSDate { get { return dateFormatter.dateFromString(WeekPlanningElementJson["end"].string!)! } }
-    var scolaryear : Int { get { return WeekPlanningElementJson["scolaryear"].int! } }
+    var scolaryear : String { get { return WeekPlanningElementJson["scolaryear"].string! } }
     var module_registered : Bool { get { return WeekPlanningElementJson["module_registered"].bool! } }
     var past : Bool { get { return WeekPlanningElementJson["past"].bool! } }
     var module_available : Bool { get { return WeekPlanningElementJson["module_available"].bool! } }
