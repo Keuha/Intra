@@ -23,12 +23,11 @@ class PlanningViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.activityIndicator.frame = CGRectMake(0, 0, 40.0, 40.0)
+        self.activityIndicator.frame = CGRectMake(0, 0, 40.0, 40.0);
         self.activityIndicator.center = self.view.center
         self.activityIndicator.hidesWhenStopped = true
         self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-        activityIndicator.startAnimating()
-        self.activityIndicator.hidden = false
+        self.activityIndicator.hidden = true
         self.view.addSubview(self.activityIndicator)
         CookieManager.week.exludeSemester(CookieManager.info.semester)
         self.activityIndicator.stopAnimating()
@@ -101,6 +100,7 @@ class PlanningViewController : UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var dateFormatter : NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        println("index path section \(indexPath.section) index path row \(indexPath.row)")
         var start = dateFormatter.stringFromDate(CookieManager.week.element[indexPath.section][indexPath.row].start)
         var end  = dateFormatter.stringFromDate(CookieManager.week.element[indexPath.section][indexPath.row].end)
         var room : String = CookieManager.week.element[indexPath.section][indexPath.row].roomCode
@@ -194,7 +194,10 @@ class PlanningViewController : UIViewController {
     }
     
     func Refresh(notification: NSNotification) {
-        self.planningTableView.reloadData();
+        self.activityIndicator.stopAnimating()
+        CookieManager.week.exludeSemester(CookieManager.info.semester)
+        self.planningTableView.reloadData()
+        
     }
 
 
