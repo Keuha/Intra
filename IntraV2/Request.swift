@@ -143,15 +143,36 @@ class Cookie {
         var url : NSURL = NSURL(string :"https://intra.epitech.eu/module/\(scolarYear)/\(codeModule)/\(codeInstance)/\(codeActi)/\(codeEvent)/register?format=json")!
         println("requete pour suscribe : \(url)" )
         var URLRequest = NSURLRequest(URL: url)
-        Alamofire.request(.POST, url).validate{()
-             NSNotificationCenter.defaultCenter().postNotificationName("SuccessRegister", object: nil, userInfo:nil)
-        }
+        Alamofire.request(.POST, url).validate().response { (_, _, _, error) in
+            self.refreshWeekPlanning()        }
     }
+
     
     func unregisterEvent(scolarYear : String, codeModule :String, codeInstance : String, codeActi : String, codeEvent : String)->Void {
         var url : NSURL = NSURL(string :"https://intra.epitech.eu/module/\(scolarYear)/\(codeModule)/\(codeInstance)/\(codeActi)/\(codeEvent)/unregister?format=json")!
         println("requete pour unsuscribe : \(url)" )
         var URLRequest = NSURLRequest(URL: url)
-        Alamofire.request(.POST, url)        }
+        Alamofire.request(.POST, url).validate().response { (_, _, _, error) in
+            self.refreshWeekPlanning()        }
+    }
+    
+    func refreshWeekPlanning() {
+        var dateFormatter : NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        let calendar = NSCalendar.currentCalendar()
+        let date = NSDate()
+        
+        let components = NSDateComponents()
+        components.day = 6
+        
+        var tmp = calendar.dateByAddingComponents(components, toDate: date, options: nil)
+        
+        var from : String = dateFormatter.stringFromDate(date)
+        
+        println("Date = \(tmp!) String from date = \(dateFormatter.stringFromDate(tmp!))")
+        var to : String = dateFormatter.stringFromDate(tmp!)
+        self.loadWeekPlanning(from, to: to)
     }
 }
