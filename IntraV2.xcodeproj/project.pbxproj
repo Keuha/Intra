@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5922519C1A6C1BC100751099 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592251951A6C1BAA00751099 /* Alamofire.framework */; };
 		5922519D1A6C1BD300751099 /* Alamofire.framework in Copy Files (2 items) */ = {isa = PBXBuildFile; fileRef = 592251951A6C1BAA00751099 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		593F9A711A7A892D00E3DFC6 /* Epitech.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A701A7A892D00E3DFC6 /* Epitech.png */; };
+		593F9A731A7A8D6E00E3DFC6 /* office.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A721A7A8D6E00E3DFC6 /* office.png */; };
+		593F9A751A7A8D7900E3DFC6 /* planning.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A741A7A8D7900E3DFC6 /* planning.png */; };
+		593F9A771A7A988300E3DFC6 /* logo-intra@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A761A7A988300E3DFC6 /* logo-intra@3x.png */; };
 		598E21A01A6AADBB00C40F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E219F1A6AADBB00C40F56 /* AppDelegate.swift */; };
 		598E21A21A6AADBB00C40F56 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E21A11A6AADBB00C40F56 /* LogViewController.swift */; };
 		598E21A51A6AADBB00C40F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598E21A31A6AADBB00C40F56 /* Main.storyboard */; };
@@ -85,6 +89,10 @@
 
 /* Begin PBXFileReference section */
 		5922518E1A6C1BA900751099 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		593F9A701A7A892D00E3DFC6 /* Epitech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Epitech.png; sourceTree = "<group>"; };
+		593F9A721A7A8D6E00E3DFC6 /* office.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = office.png; sourceTree = "<group>"; };
+		593F9A741A7A8D7900E3DFC6 /* planning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planning.png; sourceTree = "<group>"; };
+		593F9A761A7A988300E3DFC6 /* logo-intra@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-intra@3x.png"; sourceTree = "<group>"; };
 		598E219A1A6AADBB00C40F56 /* IntraV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntraV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598E219E1A6AADBB00C40F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598E219F1A6AADBB00C40F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +148,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		593F9A6F1A7A892400E3DFC6 /* Picto */ = {
+			isa = PBXGroup;
+			children = (
+				593F9A761A7A988300E3DFC6 /* logo-intra@3x.png */,
+				593F9A741A7A8D7900E3DFC6 /* planning.png */,
+				593F9A721A7A8D6E00E3DFC6 /* office.png */,
+				593F9A701A7A892D00E3DFC6 /* Epitech.png */,
+			);
+			name = Picto;
+			sourceTree = "<group>";
+		};
 		598E21911A6AADBB00C40F56 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +202,7 @@
 		598E219D1A6AADBB00C40F56 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				593F9A6F1A7A892400E3DFC6 /* Picto */,
 				598E219E1A6AADBB00C40F56 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -339,9 +359,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593F9A771A7A988300E3DFC6 /* logo-intra@3x.png in Resources */,
 				598E21A51A6AADBB00C40F56 /* Main.storyboard in Resources */,
 				598E21AA1A6AADBB00C40F56 /* LaunchScreen.xib in Resources */,
 				598E21A71A6AADBB00C40F56 /* Images.xcassets in Resources */,
+				593F9A711A7A892D00E3DFC6 /* Epitech.png in Resources */,
+				593F9A731A7A8D6E00E3DFC6 /* office.png in Resources */,
+				593F9A751A7A8D7900E3DFC6 /* planning.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = IntraV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -512,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = IntraV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
