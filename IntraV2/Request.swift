@@ -139,5 +139,19 @@ class Cookie {
         }
     }
     
+    func registerEvent(scolarYear : String, codeModule :String, codeInstance : String, codeActi : String, codeEvent : String)->Void {
+        var url : NSURL = NSURL(string :"https://intra.epitech.eu/module/\(scolarYear)/\(codeModule)/\(codeInstance)/\(codeActi)/\(codeEvent)/register?format=json")!
+        println("requete pour suscribe : \(url)" )
+        var URLRequest = NSURLRequest(URL: url)
+        Alamofire.request(.POST, url).validate{()
+             NSNotificationCenter.defaultCenter().postNotificationName("SuccessRegister", object: nil, userInfo:nil)
+        }
+    }
     
+    func unregisterEvent(scolarYear : String, codeModule :String, codeInstance : String, codeActi : String, codeEvent : String)->Void {
+        var url : NSURL = NSURL(string :"https://intra.epitech.eu/module/\(scolarYear)/\(codeModule)/\(codeInstance)/\(codeActi)/\(codeEvent)/unregister?format=json")!
+        println("requete pour unsuscribe : \(url)" )
+        var URLRequest = NSURLRequest(URL: url)
+        Alamofire.request(.POST, url)        }
+    }
 }
