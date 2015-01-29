@@ -173,6 +173,10 @@ class Cookie {
         
         println("Date = \(tmp!) String from date = \(dateFormatter.stringFromDate(tmp!))")
         var to : String = dateFormatter.stringFromDate(tmp!)
+        self.today.element.removeAll(keepCapacity: false)
+        for (var i : Int = 0; i < self.week.element.count; i++) {
+            self.week.element[i].removeAll(keepCapacity: false)
+        }
         self.loadWeekPlanning(from, to: to)
     }
 }
