@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="h45-eN-AwQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0W-v3-eLm">
                                 <rect key="frame" x="139" y="96" width="43" height="21"/>
                                 <constraints>
@@ -75,10 +78,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="a0W-v3-eLm" secondAttribute="centerX" id="3xc-1T-yft"/>
+                            <constraint firstAttribute="trailing" secondItem="h45-eN-AwQ" secondAttribute="trailing" id="79k-lE-K8Y"/>
                             <constraint firstItem="mqb-pE-zvZ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="163" id="9ZB-sc-dKC"/>
                             <constraint firstAttribute="centerX" secondItem="W8i-gO-pt0" secondAttribute="centerX" id="HEz-Kp-ZaX"/>
+                            <constraint firstItem="h45-eN-AwQ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="I2x-8M-Qdx"/>
                             <constraint firstItem="W8i-gO-pt0" firstAttribute="top" secondItem="mqb-pE-zvZ" secondAttribute="bottom" constant="8" id="Yaf-tt-rio"/>
                             <constraint firstAttribute="centerX" secondItem="FeS-pz-24o" secondAttribute="centerX" id="ZO7-jC-ZXe"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="h45-eN-AwQ" secondAttribute="bottom" id="aNv-Mh-5Y9"/>
                             <constraint firstAttribute="centerX" secondItem="6QV-94-AeR" secondAttribute="centerX" id="c3N-gs-oYc"/>
                             <constraint firstAttribute="centerX" secondItem="mqb-pE-zvZ" secondAttribute="centerX" id="dq9-ci-bKQ"/>
                             <constraint firstItem="FeS-pz-24o" firstAttribute="top" secondItem="a0W-v3-eLm" secondAttribute="bottom" constant="8" id="eBg-Nk-V38"/>
@@ -86,6 +92,7 @@
                             <constraint firstItem="Mwo-8C-Jjj" firstAttribute="top" secondItem="6QV-94-AeR" secondAttribute="bottom" constant="39" id="jFE-Ag-GwO"/>
                             <constraint firstItem="6QV-94-AeR" firstAttribute="top" secondItem="W8i-gO-pt0" secondAttribute="bottom" constant="19" id="jQa-Vj-uyN"/>
                             <constraint firstItem="Mwo-8C-Jjj" firstAttribute="centerX" secondItem="6QV-94-AeR" secondAttribute="centerX" id="max-SF-KDj"/>
+                            <constraint firstItem="h45-eN-AwQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="voI-OW-dfj"/>
                             <constraint firstItem="mqb-pE-zvZ" firstAttribute="top" secondItem="FeS-pz-24o" secondAttribute="bottom" constant="8" id="zn6-LU-ZI7"/>
                         </constraints>
                     </view>
@@ -539,6 +546,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background.png" width="1080" height="1920"/>
         <image name="office.png" width="32" height="32"/>
         <image name="planning.png" width="32" height="32"/>
     </resources>
