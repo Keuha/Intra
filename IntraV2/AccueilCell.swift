@@ -63,24 +63,32 @@ class CustomTodayCell : UITableViewCell {
         if (data.event_registered == "") {
             var alert = UIAlertController(title: "Inscription", message: "Voulez-vous vous inscrire à l'activité \(data.acti_title) ?", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler:nil))
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler:{ action in
-              CookieState.CookieManager.registerEvent(data.scolaryear, codeModule: data.codemodule, codeInstance: data.codeinstance, codeActi: data.codeacti, codeEvent: data.codeevent)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler:{ _ in self.regist()
             }))
             self.delegate.presentViewController(alert, animated: true, completion: nil)
         } else {
             var alert = UIAlertController(title: "Désinscription", message: "Voulez-vous vous désinscrire de l'activité \(data.acti_title) ?", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler:nil))
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler:{
-                action in
-                CookieState.CookieManager.unregisterEvent(data.scolaryear, codeModule: data.codemodule, codeInstance: data.codeinstance, codeActi: data.codeacti, codeEvent: data.codeevent)
+                _ in self.unregist()
+                
             }))
             self.delegate.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
     private func regist() {
+        self.delegate.activityIndicator.hidden = false
+        self.delegate.activityIndicator.startAnimating()
         var data = CookieState.CookieManager.week.element[section][row]
         CookieState.CookieManager.registerEvent(data.scolaryear, codeModule: data.codemodule, codeInstance: data.codeinstance, codeActi: data.codeacti, codeEvent: data.codeevent)
+    }
+    
+    private func unregist() {
+        self.delegate.activityIndicator.hidden = false
+        self.delegate.activityIndicator.startAnimating()
+        var data = CookieState.CookieManager.week.element[section][row]
+        CookieState.CookieManager.unregisterEvent(data.scolaryear, codeModule: data.codemodule, codeInstance: data.codeinstance, codeActi: data.codeacti, codeEvent: data.codeevent)
     }
     
 }
