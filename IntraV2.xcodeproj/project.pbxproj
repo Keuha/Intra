@@ -12,7 +12,8 @@
 		593F9A711A7A892D00E3DFC6 /* Epitech.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A701A7A892D00E3DFC6 /* Epitech.png */; };
 		593F9A731A7A8D6E00E3DFC6 /* office.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A721A7A8D6E00E3DFC6 /* office.png */; };
 		593F9A751A7A8D7900E3DFC6 /* planning.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A741A7A8D7900E3DFC6 /* planning.png */; };
-		593F9A771A7A988300E3DFC6 /* logo-intra@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A761A7A988300E3DFC6 /* logo-intra@3x.png */; };
+		593F9A791A7BC75C00E3DFC6 /* LoadLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A781A7BC75C00E3DFC6 /* LoadLogo.png */; };
+		593F9A7B1A7BCB6900E3DFC6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 593F9A7A1A7BCB6900E3DFC6 /* background.png */; };
 		598E21A01A6AADBB00C40F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E219F1A6AADBB00C40F56 /* AppDelegate.swift */; };
 		598E21A21A6AADBB00C40F56 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E21A11A6AADBB00C40F56 /* LogViewController.swift */; };
 		598E21A51A6AADBB00C40F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598E21A31A6AADBB00C40F56 /* Main.storyboard */; };
@@ -92,7 +93,8 @@
 		593F9A701A7A892D00E3DFC6 /* Epitech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Epitech.png; sourceTree = "<group>"; };
 		593F9A721A7A8D6E00E3DFC6 /* office.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = office.png; sourceTree = "<group>"; };
 		593F9A741A7A8D7900E3DFC6 /* planning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planning.png; sourceTree = "<group>"; };
-		593F9A761A7A988300E3DFC6 /* logo-intra@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-intra@3x.png"; sourceTree = "<group>"; };
+		593F9A781A7BC75C00E3DFC6 /* LoadLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadLogo.png; sourceTree = "<group>"; };
+		593F9A7A1A7BCB6900E3DFC6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		598E219A1A6AADBB00C40F56 /* IntraV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntraV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598E219E1A6AADBB00C40F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598E219F1A6AADBB00C40F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,7 +153,8 @@
 		593F9A6F1A7A892400E3DFC6 /* Picto */ = {
 			isa = PBXGroup;
 			children = (
-				593F9A761A7A988300E3DFC6 /* logo-intra@3x.png */,
+				593F9A7A1A7BCB6900E3DFC6 /* background.png */,
+				593F9A781A7BC75C00E3DFC6 /* LoadLogo.png */,
 				593F9A741A7A8D7900E3DFC6 /* planning.png */,
 				593F9A721A7A8D6E00E3DFC6 /* office.png */,
 				593F9A701A7A892D00E3DFC6 /* Epitech.png */,
@@ -359,7 +362,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				593F9A771A7A988300E3DFC6 /* logo-intra@3x.png in Resources */,
+				593F9A791A7BC75C00E3DFC6 /* LoadLogo.png in Resources */,
+				593F9A7B1A7BCB6900E3DFC6 /* background.png in Resources */,
 				598E21A51A6AADBB00C40F56 /* Main.storyboard in Resources */,
 				598E21AA1A6AADBB00C40F56 /* LaunchScreen.xib in Resources */,
 				598E21A71A6AADBB00C40F56 /* Images.xcassets in Resources */,
