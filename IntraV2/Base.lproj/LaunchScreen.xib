@@ -23,7 +23,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-intra@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="JMt-Bm-bs3">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="JMt-Bm-bs3">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
             </subviews>
@@ -34,10 +34,14 @@
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
                 <constraint firstItem="JMt-Bm-bs3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ssg-0O-hbM"/>
+                <constraint firstItem="JMt-Bm-bs3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wu5-i6-p5x"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
+                <constraint firstAttribute="trailing" secondItem="JMt-Bm-bs3" secondAttribute="trailing" id="a97-1a-GfH"/>
                 <constraint firstItem="JMt-Bm-bs3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e3T-gu-o5Y"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstAttribute="bottom" secondItem="JMt-Bm-bs3" secondAttribute="bottom" id="qML-lu-0MB"/>
                 <constraint firstAttribute="trailing" secondItem="JMt-Bm-bs3" secondAttribute="trailing" id="rqt-Ma-2FA"/>
+                <constraint firstItem="JMt-Bm-bs3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vCB-h0-szV"/>
                 <constraint firstAttribute="bottom" secondItem="JMt-Bm-bs3" secondAttribute="bottom" id="xsX-oL-Lhx"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -46,6 +50,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo-intra@3x.png" width="1920" height="3408"/>
+        <image name="LoadLogo.png" width="1080" height="1920"/>
     </resources>
 </document>
