@@ -28,6 +28,8 @@ class LogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         CookieManager = CookieState.CookieManager
         appDel = (UIApplication.sharedApplication().delegate as AppDelegate)
         context = appDel!.managedObjectContext
@@ -50,6 +52,11 @@ class LogViewController: UIViewController {
         self.activityIndicator.hidden = true
         
         self.view.addSubview(self.activityIndicator)
+        
+        var backGround = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        backGround.image = UIImage(named: "background.png")
+        self.view.sendSubviewToBack(backGround)
+        
         var request = NSFetchRequest(entityName:"ID")
         var result: NSArray = context.executeFetchRequest(request, error:nil) as [ID]
         if (result.count > 0) {
