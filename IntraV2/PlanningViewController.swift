@@ -116,7 +116,8 @@ class PlanningViewController : UIViewController {
             var substring: String = room.substringFromIndex(advance(index!, 1))
             cell.roomTextField.text = substring
         }
-        if (CookieManager.week.element[indexPath.section][indexPath.row].event_registered == "registered") {
+        
+        if (CookieManager.week.element[indexPath.section][indexPath.row].event_registered == "registered" ) {
             cell.registerButton.setTitle("\u{2713}", forState: nil)
         } else {
             cell.registerButton.setTitle("x", forState: nil)
@@ -196,9 +197,9 @@ class PlanningViewController : UIViewController {
     
     func Refresh(notification: NSNotification) {
         self.activityIndicator.stopAnimating()
+        self.planningTableView.scrollEnabled = true;
         CookieManager.week.exludeSemester(CookieManager.info.semester)
         self.planningTableView.reloadData()
-        
     }
 
 
