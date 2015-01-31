@@ -82,6 +82,7 @@ class CustomTodayCell : UITableViewCell {
     }
     
     private func regist() {
+        self.delegate.planningTableView.scrollEnabled = false;
         self.delegate.activityIndicator.hidden = false
         self.delegate.activityIndicator.startAnimating()
         var data = CookieState.CookieManager.week.element[section][row]
@@ -89,10 +90,24 @@ class CustomTodayCell : UITableViewCell {
     }
     
     private func unregist() {
+        self.delegate.planningTableView.scrollEnabled = false;
         self.delegate.activityIndicator.hidden = false
         self.delegate.activityIndicator.startAnimating()
         var data = CookieState.CookieManager.week.element[section][row]
         CookieState.CookieManager.unregisterEvent(data.scolaryear, codeModule: data.codemodule, codeInstance: data.codeinstance, codeActi: data.codeacti, codeEvent: data.codeevent)
+    }
+    
+    private func setOverlay() -> UIImage {
+        var rect : CGRect = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+        UIGraphicsBeginImageContext(rect.size);
+        var context :CGContextRef  = UIGraphicsGetCurrentContext();
+        
+        CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
+        CGContextFillRect(context, rect)
+        
+        var img : UIImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return img
     }
     
 }
