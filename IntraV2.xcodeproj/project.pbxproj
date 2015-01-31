@@ -31,6 +31,7 @@
 		598E21E01A6B184A00C40F56 /* WeekPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E21DF1A6B184A00C40F56 /* WeekPlanning.swift */; };
 		5995D2711A6BF0BE00C2AC26 /* Projets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995D2701A6BF0BE00C2AC26 /* Projets.swift */; };
 		5995D2761A6BFA4800C2AC26 /* AccueilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995D2751A6BFA4800C2AC26 /* AccueilCell.swift */; };
+		599EC0D21A7D2D0400D73459 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 599EC0D11A7D2D0400D73459 /* settings.png */; };
 		59E249F31A6C5E890068E04C /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E249F21A6C5E890068E04C /* PlanningViewController.swift */; };
 		59FBEFC31A6BEA3400DCF1A4 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FBEFC21A6BEA3400DCF1A4 /* History.swift */; };
 		59FBEFC51A6BEF6E00DCF1A4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FBEFC41A6BEF6E00DCF1A4 /* Note.swift */; };
@@ -116,6 +117,7 @@
 		598E21DF1A6B184A00C40F56 /* WeekPlanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekPlanning.swift; sourceTree = "<group>"; };
 		5995D2701A6BF0BE00C2AC26 /* Projets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projets.swift; sourceTree = "<group>"; };
 		5995D2751A6BFA4800C2AC26 /* AccueilCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilCell.swift; sourceTree = "<group>"; };
+		599EC0D11A7D2D0400D73459 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		59E249F21A6C5E890068E04C /* PlanningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		59FBEFC21A6BEA3400DCF1A4 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		59FBEFC41A6BEF6E00DCF1A4 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		593F9A6F1A7A892400E3DFC6 /* Picto */ = {
 			isa = PBXGroup;
 			children = (
+				599EC0D11A7D2D0400D73459 /* settings.png */,
 				593F9A7A1A7BCB6900E3DFC6 /* background.png */,
 				593F9A781A7BC75C00E3DFC6 /* LoadLogo.png */,
 				593F9A741A7A8D7900E3DFC6 /* planning.png */,
@@ -368,6 +371,7 @@
 				598E21AA1A6AADBB00C40F56 /* LaunchScreen.xib in Resources */,
 				598E21A71A6AADBB00C40F56 /* Images.xcassets in Resources */,
 				593F9A711A7A892D00E3DFC6 /* Epitech.png in Resources */,
+				599EC0D21A7D2D0400D73459 /* settings.png in Resources */,
 				593F9A731A7A8D6E00E3DFC6 /* office.png in Resources */,
 				593F9A751A7A8D7900E3DFC6 /* planning.png in Resources */,
 			);
