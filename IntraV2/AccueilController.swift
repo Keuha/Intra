@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import Alamofire
 
-class AccueilController :UIViewController,  UITableViewDelegate, UITableViewDataSource{
+class AccueilController :UIViewController,  UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate {
     
+    @IBOutlet var DisconnectButton: UIButton!
     @IBOutlet var pictureAccueil: UIImageView!
     @IBOutlet var firstNameAcceuil: UILabel!
     @IBOutlet var lastNameAccueil: UILabel!
@@ -22,6 +23,8 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DisconnectButton.setTitle("", forState: UIControlState.Normal)
+        DisconnectButton.setImage(UIImage(named: "settings.png"), forState: UIControlState.Normal)
         self.CookieManager.today.exludeSemester(self.CookieManager.info.semester)
         self.CookieManager.today.onlyRegister()
         var request = NSURLRequest(URL: NSURL(string: "https://cdn.local.epitech.eu/userprofil/profilview/\(self.CookieManager.user.login).jpg")!)
@@ -179,11 +182,23 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.5
     }
+    
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         var imageView : UIImageView = UIImageView(frame:  CGRectMake(0, 0, tableView.frame.size.width, 0.5))
         imageView.backgroundColor = UIColor.blackColor()
         return imageView
     }
    
+    
+    @IBAction func optionShow(sender: AnyObject) {
+        let actionSheet = UIActionSheet(title: "Takes the appearance of the bottom bar if specified; otherwise, same as UIActionSheetStyleDefault.", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Déconnexion")
+        actionSheet.actionSheetStyle = .Default
+        actionSheet.showInView(self.view)
+    }
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        if buttonIndex == 1 {
+         dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
 
 }
