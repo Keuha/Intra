@@ -60,7 +60,11 @@ class CustomTodayCell : UITableViewCell {
     
     func pressedAction(sender: UIButton!) {
         var data = CookieState.CookieManager.week.element[section][row]
-        if (data.event_registered == "") {
+        if (data.type_title == "Soutenance" || data.type_title == "Suivis") {
+            var alert = UIAlertController(title: "Action impossible", message: "Impossible de s'incrire aux evenement de type Suivis ou Soutenance", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler:nil))
+            self.delegate.presentViewController(alert, animated: true, completion: nil)
+        } else if (data.event_registered == "") {
             var alert = UIAlertController(title: "Inscription", message: "Voulez-vous vous inscrire à l'activité \(data.acti_title) ?", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler:nil))
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler:{ _ in self.regist()
