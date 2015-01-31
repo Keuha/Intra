@@ -126,7 +126,7 @@ class WeekPlanningElement  {
     var codeinstance : String { get { return WeekPlanningElementJson["codeinstance"].string! } }
     var dates : NSDate { get { return dateFormatter.dateFromString(WeekPlanningElementJson["dates"].string!)! } }
     var register_student : Bool { get { return WeekPlanningElementJson["title"].bool! } }
-    var type_title : String { get { return WeekPlanningElementJson["register_student"].string! } }
+    var type_title : String { get { return WeekPlanningElementJson["type_title"].string! } }
     var num_event : Int { get { return WeekPlanningElementJson["num_event"].int! } }
     var end : NSDate { get { return dateFormatter.dateFromString(WeekPlanningElementJson["end"].string!)! } }
     var scolaryear : String { get { return WeekPlanningElementJson["scolaryear"].string! } }
