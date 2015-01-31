@@ -38,9 +38,7 @@ class LogViewController: UIViewController {
         tapRecognizer.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tapRecognizer)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "FailedToLogin:", name: "FailedLogin", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "SuccesToLogin:", name: "SuccessLogin", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "UpdateState:", name: "Update", object: nil)
+       
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -63,6 +61,9 @@ class LogViewController: UIViewController {
             loginTextField.text = result[result.count  - 1].valueForKey("log") as String
             passTextField.text = result[result.count  - 1].valueForKey("pass") as String
         }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "FailedToLogin:", name: "FailedLogin", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "SuccesToLogin:", name: "SuccessLogin", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "UpdateState:", name: "Update", object: nil)
     }
     
     ///Hide keyboard when click somewhere out the keyboard
