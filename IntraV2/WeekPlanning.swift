@@ -13,9 +13,18 @@ class WeekPlanning {
     
     var element : Array<Array<WeekPlanningElement>> = Array<Array<WeekPlanningElement>>()
     var dateFormatter : NSDateFormatter = NSDateFormatter()
+    var countRegisterToday : Int { get {
+        var n : Int = 0
+        for (var i : Int = 0; i < element[0].count; i++) {
+            if (!(element[0][i].event_registered != "registered" || element[0][i].acti_title.isEmpty || element[0][i].roomCode.isEmpty || element[0][i].start.isEqual(nil))) {
+                    n++
+                }
+            }
+        return n
+        }
+    }
     
-    init (J : JSON) {
-        
+     init (J : JSON) {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:SS"
         for (var y : Int = 0; y < 7; y++) {
             element.append(Array<WeekPlanningElement>())
@@ -28,6 +37,19 @@ class WeekPlanning {
         }
     }
     
+    func getNextRegister(I : Int) ->WeekPlanningElement {
+        var n : Int = 0
+        for (var i : Int = 0; i < element[0].count; i++) {
+            if (!(element[0][i].event_registered != "registered" || element[0][i].acti_title.isEmpty || element[0][i].roomCode.isEmpty || element[0][i].start.isEqual(nil))) {
+                    n++
+                    if (n == I) {
+                        return element[0][i]
+                        
+                    }
+                }
+            }
+            return element[0][0]
+        }
     
     func dateSubString (date :NSDate) ->String {
         var str : String = dateFormatter.stringFromDate(date)
@@ -62,6 +84,8 @@ class WeekPlanning {
         var i : Int = element.count
         return i
     }
+    
+    
     
     func exludeSemester(_semester : Int) {
         var i : Int = 0
