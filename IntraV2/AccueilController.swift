@@ -45,7 +45,6 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(animated: Bool) {
-        
         logTableView.reloadData()
     }
     
@@ -69,7 +68,7 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         switch(section)
         {
         case 0:
-            return self.CookieManager.week.element[0].count
+            return self.CookieManager.week.countRegisterToday
         case 1:
             return self.CookieManager.note.element.count
         case 2:
@@ -86,11 +85,12 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         switch (indexPath.section) {
             case 0:
                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                var start = dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].start)
-                var end  = dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].end)
-                var room : String = self.CookieManager.week.element[indexPath.section][indexPath.row].roomCode
+                var data : WeekPlanningElement = self.CookieManager.week.getNextRegister(indexPath.row)
+                var start = dateFormatter.stringFromDate(data.start)
+                var end  = dateFormatter.stringFromDate(data.end)
+                var room : String = data.roomCode
                 let cell = tableView.dequeueReusableCellWithIdentifier("TodayCell") as CustomTodayCell
-                cell.titleTextField?.text = self.CookieManager.week.element[indexPath.section][indexPath.row].acti_title
+                cell.titleTextField?.text = data.acti_title
                 cell.hourTextField?.text = "De \(start.substringFromIndex(advance(start.startIndex, 11))) à \(end.substringFromIndex(advance(end.startIndex, 11)))"
                 var index = room.rangeOfString("/", options:NSStringCompareOptions.BackwardsSearch)?.startIndex
                 var substring: String = room.substringFromIndex(advance(index!, 1))
