@@ -85,7 +85,6 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         var dateFormatter : NSDateFormatter = NSDateFormatter()
         switch (indexPath.section) {
             case 0:
-                println("Start \(dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].start)) End\(dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].end)) Room \(self.CookieManager.week.element[indexPath.section][indexPath.row].roomCode) Title\(self.CookieManager.week.element[indexPath.section][indexPath.row].acti_title)")
                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 var start = dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].start)
                 var end  = dateFormatter.stringFromDate(self.CookieManager.week.element[indexPath.section][indexPath.row].end)
@@ -191,7 +190,7 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
    
     
     @IBAction func optionShow(sender: AnyObject) {
-        let actionSheet = UIActionSheet(title: "Takes the appearance of the bottom bar if specified; otherwise, same as UIActionSheetStyleDefault.", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Déconnexion")
+        let actionSheet = UIActionSheet(title: "Options", delegate: self, cancelButtonTitle: "Annuler", destructiveButtonTitle: nil, otherButtonTitles: "Déconnexion")
         actionSheet.actionSheetStyle = .Default
         actionSheet.showInView(self.view)
     }

@@ -101,7 +101,6 @@ class PlanningViewController : UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var dateFormatter : NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        println("index path section \(indexPath.section) index path row \(indexPath.row)")
         var start = dateFormatter.stringFromDate(CookieManager.week.element[indexPath.section][indexPath.row].start)
         var end  = dateFormatter.stringFromDate(CookieManager.week.element[indexPath.section][indexPath.row].end)
         var room : String = CookieManager.week.element[indexPath.section][indexPath.row].roomCode
@@ -140,7 +139,6 @@ class PlanningViewController : UIViewController {
         case 0:
             var day : Int =  myCalendar!.components(.WeekdayCalendarUnit, fromDate: NSDate()).weekday
             var date : String = dateFormatter.stringFromDate(NSDate())
-            println("\(self.dayOfTheWeek[day]) - \(date)")
             headerCell.textLabel?.text = "\(self.dayOfTheWeek[day]) - \(date)"
             return headerCell
         case 1:

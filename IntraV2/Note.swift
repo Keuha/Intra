@@ -17,7 +17,6 @@ class Note {
         var i : Int = 0
         while (J[i] != nil) {
             element.append(NoteElement(J:J[i]))
-            println("Add \(element[i].note)")
             i++
         }
     }
@@ -41,7 +40,6 @@ class NoteElement {
     var note : String { get { return NoteElementJson["note"].string! } }
     var noteur : String { get { return NoteElementJson["noteur"].string! } }
     init(J:JSON) {
-        println("NoteElement : \(J)")
         self.NoteElementJson = J
     }
 }

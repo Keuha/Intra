@@ -97,7 +97,6 @@ class Cookie {
     }
     
     func loadTodayPlanning(url : NSURL)->Void {
-        println("loadTodayPlanning:NSURL() = \(url)")
         var URLRequest = NSURLRequest(URL: url)
         Alamofire.request(.POST, url).responseString{(request, response, jString, error) in
             if (jString != "") {
@@ -118,7 +117,6 @@ class Cookie {
                 
                 var from : String = dateFormatter.stringFromDate(date)
 
-                println("Date = \(tmp!) String from date = \(dateFormatter.stringFromDate(tmp!))")
                 var to : String = dateFormatter.stringFromDate(tmp!)
                 self.loadWeekPlanning(from, to: to)
             }
@@ -127,7 +125,6 @@ class Cookie {
     
     func loadWeekPlanning(from : String, to :String)->Void {
         var url : NSURL = NSURL(string :"https://intra.epitech.eu/planning/load?format=json&start=\(from)&end=\(to)")!
-        println("requete pour le planning : \(url)" )
         var URLRequest = NSURLRequest(URL: url)
         Alamofire.request(.POST, url).responseString{(request, response, jString, error) in
             if (jString != "") {
@@ -141,7 +138,6 @@ class Cookie {
     
     func registerEvent(scolarYear : String, codeModule :String, codeInstance : String, codeActi : String, codeEvent : String)->Void {
         var url : NSURL = NSURL(string :"https://intra.epitech.eu/module/\(scolarYear)/\(codeModule)/\(codeInstance)/\(codeActi)/\(codeEvent)/register?format=json")!
-        println("requete pour suscribe : \(url)" )
         var URLRequest = NSURLRequest(URL: url)
         Alamofire.request(.POST, url).validate().response { (_, _, _, error) in
             self.refreshWeekPlanning()        }
@@ -150,7 +146,6 @@ class Cookie {
     
     func unregisterEvent(scolarYear : String, codeModule :String, codeInstance : String, codeActi : String, codeEvent : String)->Void {
         var url : NSURL = NSURL(string :"https://intra.epitech.eu/module/\(scolarYear)/\(codeModule)/\(codeInstance)/\(codeActi)/\(codeEvent)/unregister?format=json")!
-        println("requete pour unsuscribe : \(url)" )
         var URLRequest = NSURLRequest(URL: url)
         Alamofire.request(.POST, url).validate().response { (_, _, _, error) in
             self.refreshWeekPlanning()        }
@@ -171,7 +166,6 @@ class Cookie {
         
         var from : String = dateFormatter.stringFromDate(date)
         
-        println("Date = \(tmp!) String from date = \(dateFormatter.stringFromDate(tmp!))")
         var to : String = dateFormatter.stringFromDate(tmp!)
         self.today.element.removeAll(keepCapacity: false)
         for (var i : Int = 0; i < self.week.element.count; i++) {

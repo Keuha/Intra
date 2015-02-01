@@ -52,7 +52,6 @@ class Infos {
     init (J : JSON!) {
         
         dateFromatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        println(J["infos"]["id"])
         self.infoJson = J
 
     }
