@@ -13,11 +13,6 @@ class CustomHeaderCell : UITableViewCell {
     
     @IBOutlet var headerTextField: UILabel!
     
-    
-    override init?(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -40,10 +35,6 @@ class CustomTodayCell : UITableViewCell {
     @IBOutlet var hourTextField: UILabel!
     @IBOutlet var titleTextField: UILabel!
     @IBOutlet var registerButton: UIButton!
-    
-    override init?(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -117,10 +108,6 @@ class CustomNoteCell : UITableViewCell {
     @IBOutlet var teacherTextField: UILabel!
     @IBOutlet var markTextField: UILabel!
     
-    override init?(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -139,11 +126,6 @@ class CustomProjetsCell : UITableViewCell {
     
     @IBOutlet var dateTextField: UILabel!
     @IBOutlet var titleTextField: UILabel!
-    
-    
-    override init?(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -164,11 +146,6 @@ class CustomHistoryCell : UITableViewCell {
     
     @IBOutlet var titleTextField: UILabel!
     @IBOutlet var contentTextField: UILabel!
-    
-    
-    override init?(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
