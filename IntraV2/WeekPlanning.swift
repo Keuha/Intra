@@ -38,7 +38,7 @@ class WeekPlanning {
     }
     
     func getNextRegister(I : Int) ->WeekPlanningElement {
-        var n : Int = 0
+        var n : Int = -1
         for (var i : Int = 0; i < element[0].count; i++) {
             if (!(element[0][i].event_registered != "registered" || element[0][i].acti_title.isEmpty || element[0][i].roomCode.isEmpty || element[0][i].start.isEqual(nil))) {
                     n++
