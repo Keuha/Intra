@@ -96,14 +96,14 @@
 		593F9A741A7A8D7900E3DFC6 /* planning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planning.png; sourceTree = "<group>"; };
 		593F9A781A7BC75C00E3DFC6 /* LoadLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadLogo.png; sourceTree = "<group>"; };
 		597F41721A8000C200F41CAC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		598E219A1A6AADBB00C40F56 /* IntraV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntraV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		598E219A1A6AADBB00C40F56 /* IntraTek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntraTek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598E219E1A6AADBB00C40F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598E219F1A6AADBB00C40F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598E21A11A6AADBB00C40F56 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		598E21A41A6AADBB00C40F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		598E21A61A6AADBB00C40F56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		598E21A91A6AADBB00C40F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		598E21AF1A6AADBB00C40F56 /* IntraV2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntraV2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		598E21AF1A6AADBB00C40F56 /* IntraTekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntraTekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		598E21B41A6AADBB00C40F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598E21B51A6AADBB00C40F56 /* IntraV2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntraV2Tests.swift; sourceTree = "<group>"; };
 		598E21C01A6AADF100C40F56 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 		598E219B1A6AADBB00C40F56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				598E219A1A6AADBB00C40F56 /* IntraV2.app */,
-				598E21AF1A6AADBB00C40F56 /* IntraV2Tests.xctest */,
+				598E219A1A6AADBB00C40F56 /* IntraTek.app */,
+				598E21AF1A6AADBB00C40F56 /* IntraTekTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,9 +256,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		598E21991A6AADBB00C40F56 /* IntraV2 */ = {
+		598E21991A6AADBB00C40F56 /* IntraTek */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 598E21B91A6AADBB00C40F56 /* Build configuration list for PBXNativeTarget "IntraV2" */;
+			buildConfigurationList = 598E21B91A6AADBB00C40F56 /* Build configuration list for PBXNativeTarget "IntraTek" */;
 			buildPhases = (
 				598E21961A6AADBB00C40F56 /* Sources */,
 				598E21971A6AADBB00C40F56 /* Frameworks */,
@@ -270,14 +270,14 @@
 			dependencies = (
 				5922519B1A6C1BB700751099 /* PBXTargetDependency */,
 			);
-			name = IntraV2;
+			name = IntraTek;
 			productName = IntraV2;
-			productReference = 598E219A1A6AADBB00C40F56 /* IntraV2.app */;
+			productReference = 598E219A1A6AADBB00C40F56 /* IntraTek.app */;
 			productType = "com.apple.product-type.application";
 		};
-		598E21AE1A6AADBB00C40F56 /* IntraV2Tests */ = {
+		598E21AE1A6AADBB00C40F56 /* IntraTekTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 598E21BC1A6AADBB00C40F56 /* Build configuration list for PBXNativeTarget "IntraV2Tests" */;
+			buildConfigurationList = 598E21BC1A6AADBB00C40F56 /* Build configuration list for PBXNativeTarget "IntraTekTests" */;
 			buildPhases = (
 				598E21AB1A6AADBB00C40F56 /* Sources */,
 				598E21AC1A6AADBB00C40F56 /* Frameworks */,
@@ -288,9 +288,9 @@
 			dependencies = (
 				598E21B11A6AADBB00C40F56 /* PBXTargetDependency */,
 			);
-			name = IntraV2Tests;
+			name = IntraTekTests;
 			productName = IntraV2Tests;
-			productReference = 598E21AF1A6AADBB00C40F56 /* IntraV2Tests.xctest */;
+			productReference = 598E21AF1A6AADBB00C40F56 /* IntraTekTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -311,7 +311,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 598E21951A6AADBB00C40F56 /* Build configuration list for PBXProject "IntraV2" */;
+			buildConfigurationList = 598E21951A6AADBB00C40F56 /* Build configuration list for PBXProject "IntraTek" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -330,8 +330,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				598E21991A6AADBB00C40F56 /* IntraV2 */,
-				598E21AE1A6AADBB00C40F56 /* IntraV2Tests */,
+				598E21991A6AADBB00C40F56 /* IntraTek */,
+				598E21AE1A6AADBB00C40F56 /* IntraTekTests */,
 			);
 		};
 /* End PBXProject section */
@@ -428,7 +428,7 @@
 		};
 		598E21B11A6AADBB00C40F56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 598E21991A6AADBB00C40F56 /* IntraV2 */;
+			target = 598E21991A6AADBB00C40F56 /* IntraTek */;
 			targetProxy = 598E21B01A6AADBB00C40F56 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -537,7 +537,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = IntraV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IntraTek;
 			};
 			name = Debug;
 		};
@@ -548,7 +548,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = IntraV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IntraTek;
 			};
 			name = Release;
 		};
@@ -566,8 +566,8 @@
 				);
 				INFOPLIST_FILE = IntraV2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntraV2.app/IntraV2";
+				PRODUCT_NAME = IntraTekTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntraTek.app/IntraTek";
 			};
 			name = Debug;
 		};
@@ -581,7 +581,7 @@
 				);
 				INFOPLIST_FILE = IntraV2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = IntraTekTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntraV2.app/IntraV2";
 			};
 			name = Release;
@@ -589,7 +589,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		598E21951A6AADBB00C40F56 /* Build configuration list for PBXProject "IntraV2" */ = {
+		598E21951A6AADBB00C40F56 /* Build configuration list for PBXProject "IntraTek" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				598E21B71A6AADBB00C40F56 /* Debug */,
@@ -598,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		598E21B91A6AADBB00C40F56 /* Build configuration list for PBXNativeTarget "IntraV2" */ = {
+		598E21B91A6AADBB00C40F56 /* Build configuration list for PBXNativeTarget "IntraTek" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				598E21BA1A6AADBB00C40F56 /* Debug */,
@@ -607,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		598E21BC1A6AADBB00C40F56 /* Build configuration list for PBXNativeTarget "IntraV2Tests" */ = {
+		598E21BC1A6AADBB00C40F56 /* Build configuration list for PBXNativeTarget "IntraTekTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				598E21BD1A6AADBB00C40F56 /* Debug */,

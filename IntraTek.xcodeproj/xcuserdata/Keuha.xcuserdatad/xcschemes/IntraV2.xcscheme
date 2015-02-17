@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "598E21991A6AADBB00C40F56"
-               BuildableName = "IntraV2.app"
-               BlueprintName = "IntraV2"
-               ReferencedContainer = "container:IntraV2.xcodeproj">
+               BuildableName = "IntraTek.app"
+               BlueprintName = "IntraTek"
+               ReferencedContainer = "container:IntraTek.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "598E21AE1A6AADBB00C40F56"
-               BuildableName = "IntraV2Tests.xctest"
-               BlueprintName = "IntraV2Tests"
-               ReferencedContainer = "container:IntraV2.xcodeproj">
+               BuildableName = "IntraTekTests.xctest"
+               BlueprintName = "IntraTekTests"
+               ReferencedContainer = "container:IntraTek.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "598E21AE1A6AADBB00C40F56"
-               BuildableName = "IntraV2Tests.xctest"
-               BlueprintName = "IntraV2Tests"
-               ReferencedContainer = "container:IntraV2.xcodeproj">
+               BuildableName = "IntraTekTests.xctest"
+               BlueprintName = "IntraTekTests"
+               ReferencedContainer = "container:IntraTek.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "598E21991A6AADBB00C40F56"
-            BuildableName = "IntraV2.app"
-            BlueprintName = "IntraV2"
-            ReferencedContainer = "container:IntraV2.xcodeproj">
+            BuildableName = "IntraTek.app"
+            BlueprintName = "IntraTek"
+            ReferencedContainer = "container:IntraTek.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "598E21991A6AADBB00C40F56"
-            BuildableName = "IntraV2.app"
-            BlueprintName = "IntraV2"
-            ReferencedContainer = "container:IntraV2.xcodeproj">
+            BuildableName = "IntraTek.app"
+            BlueprintName = "IntraTek"
+            ReferencedContainer = "container:IntraTek.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "598E21991A6AADBB00C40F56"
-            BuildableName = "IntraV2.app"
-            BlueprintName = "IntraV2"
-            ReferencedContainer = "container:IntraV2.xcodeproj">
+            BuildableName = "IntraTek.app"
+            BlueprintName = "IntraTek"
+            ReferencedContainer = "container:IntraTek.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
