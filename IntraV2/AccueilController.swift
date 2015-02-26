@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import CoreData
 
 class AccueilController :UIViewController,  UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate {
     
@@ -18,14 +19,37 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
     @IBOutlet var lastNameAccueil: UILabel!
     @IBOutlet var gpaAccueil: UILabel!
     @IBOutlet var logTableView: UITableView!
+    
+    var appDel : AppDelegate!
+    var context : NSManagedObjectContext!
+    
     var CookieManager = CookieState.CookieManager
+    var semester : Array<String>! = Array<String>()
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        appDel = (UIApplication.sharedApplication().delegate as AppDelegate)
+        context = appDel!.managedObjectContext
+        
+        var req = NSFetchRequest(entityName:"SEMESTER")
+        var result: NSArray = context.executeFetchRequest(req, error:nil) as [SEMESTER]
+        if result.count == 0 {
+            var newID = NSEntityDescription.insertNewObjectForEntityForName("SEMESTER", inManagedObjectContext: self.context!) as NSManagedObject
+            newID.setValue("\(self.CookieManager.info.semester)", forKey:"title")
+            println(self.CookieManager.info.semester)
+            self.semester.append("\(self.CookieManager.info.semester)")
+        } else {
+            for res in result {
+                self.semester.append("\(res)")
+            }
+        }
         DisconnectButton.setTitle("", forState: UIControlState.Normal)
         DisconnectButton.setImage(UIImage(named: "settings.png"), forState: UIControlState.Normal)
-        self.CookieManager.today.exludeSemester(self.CookieManager.info.semester)
+        self.CookieManager.today.exludeSemester(self.semester)
         self.CookieManager.today.onlyRegister()
         var request = NSURLRequest(URL: NSURL(string: "https://cdn.local.epitech.eu/userprofil/profilview/\(self.CookieManager.user.login).jpg")!)
         pictureAccueil.backgroundColor = UIColor.grayColor()
@@ -190,12 +214,15 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
    
     
     @IBAction func optionShow(sender: AnyObject) {
-        let actionSheet = UIActionSheet(title: "Options", delegate: self, cancelButtonTitle: "Annuler", destructiveButtonTitle: nil, otherButtonTitles: "Déconnexion")
+        let actionSheet = UIActionSheet(title: "Options", delegate: self, cancelButtonTitle: "Annuler", destructiveButtonTitle: nil, otherButtonTitles: "Choix semestre", "Déconnexion")
         actionSheet.actionSheetStyle = .Default
         actionSheet.showInView(self.view)
     }
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
         if buttonIndex == 1 {
+            println("semestre ! ")
+        }
+        if buttonIndex == 2 {
          dismissViewControllerAnimated(true, completion: nil)
         }
     }
