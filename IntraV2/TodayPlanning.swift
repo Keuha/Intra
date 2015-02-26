@@ -34,10 +34,10 @@ class TodayPlanning {
         return i
     }
     
-    func exludeSemester(_semester : Int) {
+    func exludeSemester(_semester : Array<String>) {
         var i : Int = 0
         while ( i < element.count) {
-            if (element[i].semester != _semester || element[i].acti_title.isEmpty || element[i].roomCode.isEmpty) {
+            if (!contains(_semester, "\(element[i].semester)") || element[i].acti_title.isEmpty || element[i].roomCode.isEmpty) {
                 element.removeAtIndex(i)
             } else {
                 i++
