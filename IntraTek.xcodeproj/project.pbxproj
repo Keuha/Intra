@@ -29,9 +29,11 @@
 		598E21DC1A6AEB8200C40F56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E21DB1A6AEB8200C40F56 /* User.swift */; };
 		598E21DE1A6AF2DD00C40F56 /* TodayPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E21DD1A6AF2DD00C40F56 /* TodayPlanning.swift */; };
 		598E21E01A6B184A00C40F56 /* WeekPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E21DF1A6B184A00C40F56 /* WeekPlanning.swift */; };
+		599453541A9F6099004B7782 /* SemesterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599453531A9F6099004B7782 /* SemesterCell.swift */; };
 		5995D2711A6BF0BE00C2AC26 /* Projets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995D2701A6BF0BE00C2AC26 /* Projets.swift */; };
 		5995D2761A6BFA4800C2AC26 /* AccueilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5995D2751A6BFA4800C2AC26 /* AccueilCell.swift */; };
 		599EC0D21A7D2D0400D73459 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 599EC0D11A7D2D0400D73459 /* settings.png */; };
+		59BF9D321A9F5E9100CC811A /* SemesterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BF9D311A9F5E9100CC811A /* SemesterController.swift */; };
 		59E249F31A6C5E890068E04C /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E249F21A6C5E890068E04C /* PlanningViewController.swift */; };
 		59FBEFC31A6BEA3400DCF1A4 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FBEFC21A6BEA3400DCF1A4 /* History.swift */; };
 		59FBEFC51A6BEF6E00DCF1A4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FBEFC41A6BEF6E00DCF1A4 /* Note.swift */; };
@@ -95,6 +97,7 @@
 		593F9A721A7A8D6E00E3DFC6 /* office.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = office.png; sourceTree = "<group>"; };
 		593F9A741A7A8D7900E3DFC6 /* planning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planning.png; sourceTree = "<group>"; };
 		593F9A781A7BC75C00E3DFC6 /* LoadLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadLogo.png; sourceTree = "<group>"; };
+		594CBA7F1A9F463C00F999E6 /* User2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User2.xcdatamodel; sourceTree = "<group>"; };
 		597F41721A8000C200F41CAC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		598E219A1A6AADBB00C40F56 /* IntraTek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntraTek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598E219E1A6AADBB00C40F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,9 +118,11 @@
 		598E21DB1A6AEB8200C40F56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		598E21DD1A6AF2DD00C40F56 /* TodayPlanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayPlanning.swift; sourceTree = "<group>"; };
 		598E21DF1A6B184A00C40F56 /* WeekPlanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekPlanning.swift; sourceTree = "<group>"; };
+		599453531A9F6099004B7782 /* SemesterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemesterCell.swift; sourceTree = "<group>"; };
 		5995D2701A6BF0BE00C2AC26 /* Projets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projets.swift; sourceTree = "<group>"; };
 		5995D2751A6BFA4800C2AC26 /* AccueilCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilCell.swift; sourceTree = "<group>"; };
 		599EC0D11A7D2D0400D73459 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		59BF9D311A9F5E9100CC811A /* SemesterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemesterController.swift; sourceTree = "<group>"; };
 		59E249F21A6C5E890068E04C /* PlanningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		59FBEFC21A6BEA3400DCF1A4 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		59FBEFC41A6BEF6E00DCF1A4 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -196,6 +201,7 @@
 				598E21C41A6AAED900C40F56 /* Request.swift */,
 				598E21A11A6AADBB00C40F56 /* LogViewController.swift */,
 				598E21A31A6AADBB00C40F56 /* Main.storyboard */,
+				59BF9D311A9F5E9100CC811A /* SemesterController.swift */,
 				59E249F21A6C5E890068E04C /* PlanningViewController.swift */,
 				598E21D61A6ACB7300C40F56 /* AccueilController.swift */,
 				598E21A61A6AADBB00C40F56 /* Images.xcassets */,
@@ -249,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				5995D2751A6BFA4800C2AC26 /* AccueilCell.swift */,
+				599453531A9F6099004B7782 /* SemesterCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -397,10 +404,12 @@
 				5995D2711A6BF0BE00C2AC26 /* Projets.swift in Sources */,
 				598E21D71A6ACB7300C40F56 /* AccueilController.swift in Sources */,
 				598E21C51A6AAED900C40F56 /* Request.swift in Sources */,
+				59BF9D321A9F5E9100CC811A /* SemesterController.swift in Sources */,
 				59FBEFC51A6BEF6E00DCF1A4 /* Note.swift in Sources */,
 				598E21A21A6AADBB00C40F56 /* LogViewController.swift in Sources */,
 				59FBEFC31A6BEA3400DCF1A4 /* History.swift in Sources */,
 				598E21DC1A6AEB8200C40F56 /* User.swift in Sources */,
+				599453541A9F6099004B7782 /* SemesterCell.swift in Sources */,
 				598E21DA1A6ACD2B00C40F56 /* Infos.swift in Sources */,
 				5995D2761A6BFA4800C2AC26 /* AccueilCell.swift in Sources */,
 				598E21E01A6B184A00C40F56 /* WeekPlanning.swift in Sources */,
@@ -622,9 +631,10 @@
 		598E21BF1A6AADF100C40F56 /* User.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				594CBA7F1A9F463C00F999E6 /* User2.xcdatamodel */,
 				598E21C01A6AADF100C40F56 /* User.xcdatamodel */,
 			);
-			currentVersion = 598E21C01A6AADF100C40F56 /* User.xcdatamodel */;
+			currentVersion = 594CBA7F1A9F463C00F999E6 /* User2.xcdatamodel */;
 			path = User.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
