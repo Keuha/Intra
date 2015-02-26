@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Log View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="LogViewController" customModule="IntraV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="LogViewController" customModule="IntraTek" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -111,7 +111,7 @@
         <!--Planning-->
         <scene sceneID="zzb-lf-4qF">
             <objects>
-                <viewController id="4fn-OJ-C5K" customClass="PlanningViewController" customModule="IntraV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4fn-OJ-C5K" customClass="PlanningViewController" customModule="IntraTek" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ji9-BK-khw"/>
                         <viewControllerLayoutGuide type="bottom" id="JUg-4S-eSo"/>
@@ -124,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayCell" rowHeight="117" id="7sh-eY-cUo" customClass="CustomTodayCell" customModule="IntraV2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayCell" rowHeight="117" id="7sh-eY-cUo" customClass="CustomTodayCell" customModule="IntraTek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sh-eY-cUo" id="WkS-WS-GYD">
@@ -178,7 +178,7 @@
                                             <outlet property="titleTextField" destination="QiZ-vo-quJ" id="MDl-XA-gpx"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="ckY-eW-err" customClass="CustomHeaderCell" customModule="IntraV2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="ckY-eW-err" customClass="CustomHeaderCell" customModule="IntraTek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ckY-eW-err" id="lt7-2b-k4l">
@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="761" y="999"/>
         </scene>
-        <!--Accueil-->
+        <!--Accueil Controller-->
         <scene sceneID="vt4-Uj-9qY">
             <objects>
-                <viewController id="tvw-0g-RBp" customClass="AccueilController" customModule="IntraV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tvw-0g-RBp" customClass="AccueilController" customModule="IntraTek" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hyl-hc-VCy"/>
                         <viewControllerLayoutGuide type="bottom" id="kyB-hp-KKo"/>
@@ -236,36 +236,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prenom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDJ-Z6-S1x">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Prenom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDJ-Z6-S1x">
                                 <rect key="frame" x="104" y="28" width="60" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rx-H3-W3Y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rx-H3-W3Y">
                                 <rect key="frame" x="104" y="56" width="37" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6b-MR-yit">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GPA:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6b-MR-yit">
                                 <rect key="frame" x="104" y="85" width="39" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vc6-dW-Xg8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vc6-dW-Xg8">
                                 <rect key="frame" x="16" y="28" width="80" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="M6g-hZ-IHL"/>
                                     <constraint firstAttribute="height" constant="95" id="e8e-ci-6ih"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WnB-RW-XRh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WnB-RW-XRh">
                                 <rect key="frame" x="0.0" y="143" width="320" height="376"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="lm7-en-ACG" customClass="CustomHeaderCell" customModule="IntraV2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="lm7-en-ACG" customClass="CustomHeaderCell" customModule="IntraTek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lm7-en-ACG" id="OGa-ey-XhT">
@@ -291,7 +291,7 @@
                                             <outlet property="headerTextField" destination="5YY-qY-x9X" id="LYi-9G-VN6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayCell" rowHeight="95" id="ngK-iX-nlK" customClass="CustomTodayCell" customModule="IntraV2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayCell" rowHeight="95" id="ngK-iX-nlK" customClass="CustomTodayCell" customModule="IntraTek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ngK-iX-nlK" id="5Iq-1T-M4L">
@@ -342,7 +342,7 @@
                                             <outlet property="titleTextField" destination="dnn-9j-mmP" id="nOC-Jg-7k6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="88" id="jXU-FU-Qme" customClass="CustomNoteCell" customModule="IntraV2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="88" id="jXU-FU-Qme" customClass="CustomNoteCell" customModule="IntraTek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jXU-FU-Qme" id="cu9-lR-aIT">
@@ -392,7 +392,7 @@
                                             <outlet property="titleTextField" destination="QRg-HI-xeI" id="xRY-Up-Ly4"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="102" id="zaR-Dt-pZB" customClass="CustomHistoryCell" customModule="IntraV2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="102" id="zaR-Dt-pZB" customClass="CustomHistoryCell" customModule="IntraTek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zaR-Dt-pZB" id="nKW-KW-9Mw">
@@ -429,7 +429,7 @@
                                             <outlet property="titleTextField" destination="K86-Ro-f8O" id="75m-es-QHp"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjetsCell" rowHeight="70" id="z3Z-8R-OU2" customClass="CustomProjetsCell" customModule="IntraV2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjetsCell" rowHeight="70" id="z3Z-8R-OU2" customClass="CustomProjetsCell" customModule="IntraTek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z3Z-8R-OU2" id="bdl-5l-Iwn">
@@ -472,7 +472,7 @@
                                     <outlet property="delegate" destination="tvw-0g-RBp" id="5h9-qL-Yxm"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttm-zJ-XI9">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttm-zJ-XI9">
                                 <rect key="frame" x="280" y="81" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="QFi-xR-7rq"/>
@@ -508,7 +508,7 @@
                             <constraint firstItem="kyB-hp-KKo" firstAttribute="top" secondItem="WnB-RW-XRh" secondAttribute="bottom" id="yAK-Z7-oog"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Accueil" image="office.png" id="NjN-pg-iJf"/>
+                    <navigationItem key="navigationItem" id="RXv-bk-8ju"/>
                     <connections>
                         <outlet property="DisconnectButton" destination="Ttm-zJ-XI9" id="rsm-5E-OVp"/>
                         <outlet property="firstNameAcceuil" destination="dDJ-Z6-S1x" id="Uh8-6M-hN3"/>
@@ -516,11 +516,93 @@
                         <outlet property="lastNameAccueil" destination="0Rx-H3-W3Y" id="ln7-v8-axK"/>
                         <outlet property="logTableView" destination="WnB-RW-XRh" id="XLp-zD-lDA"/>
                         <outlet property="pictureAccueil" destination="vc6-dW-Xg8" id="bbu-xZ-ebV"/>
+                        <segue destination="j6y-nn-5s9" kind="push" identifier="semesterSegue" id="57t-37-Jey"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSz-V0-L0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="761" y="349"/>
+            <point key="canvasLocation" x="1328" y="346"/>
+        </scene>
+        <!--Semester View Controller-->
+        <scene sceneID="qFX-cj-PbV">
+            <objects>
+                <viewController id="j6y-nn-5s9" customClass="SemesterViewController" customModule="IntraTek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RMa-5P-pr1"/>
+                        <viewControllerLayoutGuide type="bottom" id="f2M-Ha-GTU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ihZ-hW-8Zv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NKh-Zr-Q0b">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="semesterCell" id="asI-dv-9G4" customClass="CustomSemesterCell" customModule="IntraTek" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="asI-dv-9G4" id="Dwy-bF-T62">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Semestre " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlU-HX-gWs">
+                                                    <rect key="frame" x="16" y="11" width="109" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eD5-JK-Vqw">
+                                                    <rect key="frame" x="301" y="11" width="11" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rlU-HX-gWs" firstAttribute="top" secondItem="Dwy-bF-T62" secondAttribute="topMargin" constant="3" id="8V0-82-eQU"/>
+                                                <constraint firstItem="eD5-JK-Vqw" firstAttribute="trailing" secondItem="Dwy-bF-T62" secondAttribute="trailingMargin" id="EuO-l4-n9b"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rlU-HX-gWs" secondAttribute="bottom" constant="3.5" id="Ljn-uL-nwu"/>
+                                                <constraint firstItem="rlU-HX-gWs" firstAttribute="leading" secondItem="Dwy-bF-T62" secondAttribute="leadingMargin" constant="8" id="RDz-kc-P6N"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eD5-JK-Vqw" secondAttribute="bottom" constant="3.5" id="hIJ-BL-dyq"/>
+                                                <constraint firstItem="eD5-JK-Vqw" firstAttribute="top" secondItem="Dwy-bF-T62" secondAttribute="topMargin" constant="3" id="hIr-3K-100"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="registerLabel" destination="eD5-JK-Vqw" id="hB6-Vx-eMM"/>
+                                            <outlet property="semesterLabel" destination="rlU-HX-gWs" id="g8Y-bW-KzW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="j6y-nn-5s9" id="i6j-4B-Nu4"/>
+                                    <outlet property="delegate" destination="j6y-nn-5s9" id="5er-Lj-a6G"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E4a-CS-qmJ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Mz4-S0-fEC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1cO-EV-PHp">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SaveButtonCliked:" destination="j6y-nn-5s9" eventType="touchDown" id="67P-0i-bce"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="1cO-EV-PHp" id="owT-oD-eFr"/>
+                        <outlet property="semesterTableView" destination="NKh-Zr-Q0b" id="jek-Gv-y0R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w46-cm-pAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792" y="346"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="U0n-ww-6Oj">
@@ -533,13 +615,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tvw-0g-RBp" kind="relationship" relationship="viewControllers" id="Ot4-JF-Dh2"/>
+                        <segue destination="jmc-xF-A5O" kind="relationship" relationship="viewControllers" id="Ot4-JF-Dh2"/>
                         <segue destination="4fn-OJ-C5K" kind="relationship" relationship="viewControllers" id="jwL-Yn-t20"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="da6-S8-wLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404.80000000000001" y="999.67999999999995"/>
+        </scene>
+        <!--Accueil-->
+        <scene sceneID="fRa-Td-iiT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jmc-xF-A5O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Accueil" image="office.png" id="NjN-pg-iJf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fk6-1l-iMq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tvw-0g-RBp" kind="relationship" relationship="rootViewController" id="jrJ-8S-GLq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5V-lD-IR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="346"/>
         </scene>
     </scenes>
     <resources>
