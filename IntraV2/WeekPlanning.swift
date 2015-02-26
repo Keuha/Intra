@@ -87,13 +87,13 @@ class WeekPlanning {
     
     
     
-    func exludeSemester(_semester : Int) {
+    func exludeSemester(_semester : Array<String>) {
         var i : Int = 0
         var y : Int = 0
         for (; i < 7; i++) {
             y = 0
             while (y < element[i].count) {
-                if (element[i][y].semester != _semester || element[i][y].acti_title.isEmpty || element[i][y].roomCode.isEmpty
+                if (!contains(_semester, "\(element[i][y].semester)") || element[i][y].acti_title.isEmpty || element[i][y].roomCode.isEmpty
                 || element[i][y].start.isEqual(nil) ) {
                         element[i].removeAtIndex(y)
                 } else {
