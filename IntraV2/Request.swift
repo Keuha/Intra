@@ -20,6 +20,7 @@ class Cookie {
     var note : Note!
     var projets : Projets!
     var week : WeekPlanning!
+    var semester : Array<String>
     var propertie = [
         NSHTTPCookiePath: "/",
         NSHTTPCookieName: "language",
@@ -35,7 +36,7 @@ class Cookie {
     {
         url = NSURL(string: "https://intra.epitech.eu?")!
         self.cookies.setCookie(NSHTTPCookie(properties: self.propertie)!)
-        
+        self.semester = Array<String>()
     }
     
     func requestWithURL(url: String)-> Void {
