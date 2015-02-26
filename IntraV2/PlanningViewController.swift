@@ -24,7 +24,6 @@ class PlanningViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicator.startAnimating()
-        CookieManager.week.exludeSemester(CookieManager.info.semester)
         self.activityIndicator.stopAnimating()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "Refresh:", name: "SuccessLogin", object: nil)
        
@@ -196,7 +195,7 @@ class PlanningViewController : UIViewController {
     func Refresh(notification: NSNotification) {
         self.activityIndicator.stopAnimating()
         self.planningTableView.scrollEnabled = true;
-        CookieManager.week.exludeSemester(CookieManager.info.semester)
+        CookieManager.week.exludeSemester(CookieManager.semester)
         self.planningTableView.reloadData()
     }
 
