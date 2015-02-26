@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14D72i" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ID" syncable="YES">
+        <attribute name="log" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pass" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SEMESTER" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ID" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="SEMESTER" positionX="-63" positionY="0" width="128" height="60"/>
+    </elements>
+</model>
