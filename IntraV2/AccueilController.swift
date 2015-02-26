@@ -44,9 +44,11 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
             self.semester.append("\(self.CookieManager.info.semester)")
         } else {
             for res in result {
-                self.semester.append("\(res)")
+                let str = res.title!
+                self.semester.append(str!)
             }
         }
+        CookieManager.semester = self.semester
         DisconnectButton.setTitle("", forState: UIControlState.Normal)
         DisconnectButton.setImage(UIImage(named: "settings.png"), forState: UIControlState.Normal)
         self.CookieManager.today.exludeSemester(self.semester)
@@ -64,12 +66,21 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         gpaAccueil.text = "GPA : \(self.CookieManager.user.GPA)"
         logTableView.rowHeight = UITableViewAutomaticDimension
         logTableView.estimatedRowHeight = 220.0
-        CookieManager.week.exludeSemester(CookieManager.info.semester)
+        CookieManager.week.exludeSemester(self.semester)
         
     }
     
     override func viewWillAppear(animated: Bool) {
-        logTableView.reloadData()
+        var req = NSFetchRequest(entityName:"SEMESTER")
+        var result: NSArray = context.executeFetchRequest(req, error:nil) as [SEMESTER]
+        for e in result {
+            let str = e.title??
+            if !contains(self.semester,str!) {
+                logTableView.reloadData()
+            }
+        }
+        self.navigationController?.navigationBar.hidden = true
+        
     }
     
     func downloadPics(data : NSData) ->UIImage {
@@ -218,9 +229,10 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         actionSheet.actionSheetStyle = .Default
         actionSheet.showInView(self.view)
     }
+    
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
         if buttonIndex == 1 {
-            println("semestre ! ")
+            performSegueWithIdentifier("semesterSegue", sender: self)
         }
         if buttonIndex == 2 {
          dismissViewControllerAnimated(true, completion: nil)
