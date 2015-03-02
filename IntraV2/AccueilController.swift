@@ -51,7 +51,6 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         CookieManager.semester = self.semester
         DisconnectButton.setTitle("", forState: UIControlState.Normal)
         DisconnectButton.setImage(UIImage(named: "settings.png"), forState: UIControlState.Normal)
-        self.CookieManager.today.exludeSemester(self.semester)
         self.CookieManager.today.onlyRegister()
         var request = NSURLRequest(URL: NSURL(string: "https://cdn.local.epitech.eu/userprofil/profilview/\(self.CookieManager.user.login).jpg")!)
         pictureAccueil.backgroundColor = UIColor.grayColor()
@@ -66,7 +65,6 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
         gpaAccueil.text = "GPA : \(self.CookieManager.user.GPA)"
         logTableView.rowHeight = UITableViewAutomaticDimension
         logTableView.estimatedRowHeight = 220.0
-        CookieManager.week.exludeSemester(self.semester)
         
     }
     
@@ -77,8 +75,11 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
             let str = e.title??
             if !contains(self.semester,str!) {
                 logTableView.reloadData()
+                break;
             }
         }
+        self.CookieManager.today.exludeSemester(self.semester)
+        CookieManager.week.exludeSemester(self.semester)
         self.navigationController?.navigationBar.hidden = true
         
     }
