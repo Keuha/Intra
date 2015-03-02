@@ -535,7 +535,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NKh-Zr-Q0b">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NKh-Zr-Q0b">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -559,12 +559,18 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="rlU-HX-gWs" firstAttribute="leading" secondItem="Dwy-bF-T62" secondAttribute="leadingMargin" constant="8" id="4YA-0v-14n"/>
                                                 <constraint firstItem="rlU-HX-gWs" firstAttribute="top" secondItem="Dwy-bF-T62" secondAttribute="topMargin" constant="3" id="8V0-82-eQU"/>
                                                 <constraint firstItem="eD5-JK-Vqw" firstAttribute="trailing" secondItem="Dwy-bF-T62" secondAttribute="trailingMargin" id="EuO-l4-n9b"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="rlU-HX-gWs" secondAttribute="bottom" constant="3.5" id="Ljn-uL-nwu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eD5-JK-Vqw" secondAttribute="bottom" constant="3.5" id="MTE-ZP-xwl"/>
                                                 <constraint firstItem="rlU-HX-gWs" firstAttribute="leading" secondItem="Dwy-bF-T62" secondAttribute="leadingMargin" constant="8" id="RDz-kc-P6N"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rlU-HX-gWs" secondAttribute="bottom" constant="3.5" id="Xc0-RA-Ru8"/>
+                                                <constraint firstItem="rlU-HX-gWs" firstAttribute="top" secondItem="Dwy-bF-T62" secondAttribute="topMargin" constant="3" id="b4D-mf-60b"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="eD5-JK-Vqw" secondAttribute="bottom" constant="3.5" id="hIJ-BL-dyq"/>
                                                 <constraint firstItem="eD5-JK-Vqw" firstAttribute="top" secondItem="Dwy-bF-T62" secondAttribute="topMargin" constant="3" id="hIr-3K-100"/>
+                                                <constraint firstItem="eD5-JK-Vqw" firstAttribute="trailing" secondItem="Dwy-bF-T62" secondAttribute="trailingMargin" id="kEA-E1-Hdz"/>
+                                                <constraint firstItem="eD5-JK-Vqw" firstAttribute="top" secondItem="Dwy-bF-T62" secondAttribute="topMargin" constant="3" id="yaF-Wo-Hgt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -580,6 +586,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NKh-Zr-Q0b" firstAttribute="leading" secondItem="ihZ-hW-8Zv" secondAttribute="leadingMargin" constant="-16" id="3PF-0k-Ovu"/>
+                            <constraint firstItem="NKh-Zr-Q0b" firstAttribute="bottom" secondItem="ihZ-hW-8Zv" secondAttribute="bottomMargin" id="EEM-Fp-tsj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NKh-Zr-Q0b" secondAttribute="trailing" constant="-16" id="UGu-C8-x5g"/>
+                            <constraint firstItem="NKh-Zr-Q0b" firstAttribute="top" secondItem="ihZ-hW-8Zv" secondAttribute="topMargin" id="UM8-SM-FoH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E4a-CS-qmJ">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Mz4-S0-fEC">
