@@ -18,13 +18,20 @@ class SemesterViewController : UIViewController, UITableViewDataSource, UITableV
     var appDel : AppDelegate!
     var context : NSManagedObjectContext!
     var CookieManager : Cookie!
-
+    
     
     override func viewDidLoad() {
         
         CookieManager = CookieState.CookieManager
         appDel = (UIApplication.sharedApplication().delegate as AppDelegate)
         context = appDel!.managedObjectContext
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "Refresh:", name: "SuccessLogin", object: nil)
+        self.activityIndicator.frame = CGRectMake(0, 0, 40.0, 40.0);
+        self.activityIndicator.center = self.view.center
+        self.activityIndicator.hidesWhenStopped = true
+        self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        self.activityIndicator.hidden = true
+        self.view.addSubview(self.activityIndicator)
 
     }
     
@@ -76,10 +83,19 @@ class SemesterViewController : UIViewController, UITableViewDataSource, UITableV
         var newID = NSEntityDescription.insertNewObjectForEntityForName("SEMESTER", inManagedObjectContext: self.context!) as NSManagedObject
         newID.setValue(e, forKey:"title")
         }
+        self.activityIndicator.hidden = false
+        self.activityIndicator.startAnimating()
+        self.view.userInteractionEnabled = false
         CookieManager?.refreshWeekPlanning()
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        
     }
     
+    func Refresh(notification: NSNotification) {
+         self.activityIndicator.stopAnimating()
+        self.view.userInteractionEnabled = true
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+   
     
 }
 
