@@ -120,6 +120,7 @@ class PlanningViewController : UIViewController {
         } else {
             cell.registerButton.setTitle("x", forState: nil)
         }
+        cell.semesterLabel.text = "S:\(CookieManager.week.element[indexPath.section][indexPath.row].semester)"
         cell.registerButton.addTarget(cell, action: "pressedAction:", forControlEvents: UIControlEvents.TouchUpInside)
         cell.contentView.bounds.size.width = UIScreen.mainScreen().bounds.width
         cell.layoutIfNeeded()
