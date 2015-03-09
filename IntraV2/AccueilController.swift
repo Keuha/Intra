@@ -71,15 +71,19 @@ class AccueilController :UIViewController,  UITableViewDelegate, UITableViewData
     override func viewWillAppear(animated: Bool) {
         var req = NSFetchRequest(entityName:"SEMESTER")
         var result: NSArray = context.executeFetchRequest(req, error:nil) as [SEMESTER]
+        self.semester.removeAll(keepCapacity: false)
         for e in result {
             let str = e.title??
-            if !contains(self.semester,str!) {
-                logTableView.reloadData()
-                break;
-            }
+            self.semester.append(str!)
         }
+        
+        logTableView.reloadData()
+        println("self.CookieManager.week.element.count = \(self.CookieManager.week.element.count)")
         self.CookieManager.today.exludeSemester(self.semester)
         CookieManager.week.exludeSemester(self.semester)
+        for e in self.CookieManager.week.element {
+            println("e.count = \(e.count)")
+        }
         self.navigationController?.navigationBar.hidden = true
         
     }
