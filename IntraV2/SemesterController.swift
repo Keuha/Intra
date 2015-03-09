@@ -83,6 +83,7 @@ class SemesterViewController : UIViewController, UITableViewDataSource, UITableV
         var newID = NSEntityDescription.insertNewObjectForEntityForName("SEMESTER", inManagedObjectContext: self.context!) as NSManagedObject
         newID.setValue(e, forKey:"title")
         }
+        context.save(nil)
         self.activityIndicator.hidden = false
         self.activityIndicator.startAnimating()
         self.view.userInteractionEnabled = false
