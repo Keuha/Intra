@@ -35,6 +35,7 @@ class CustomTodayCell : UITableViewCell {
     @IBOutlet var hourTextField: UILabel!
     @IBOutlet var titleTextField: UILabel!
     @IBOutlet var registerButton: UIButton!
+    @IBOutlet var semesterLabel: UILabel!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
